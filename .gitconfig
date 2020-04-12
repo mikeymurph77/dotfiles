@@ -1,0 +1,21 @@
+# https://git-scm.com/docs/git-config/2.20.0#_variables
+
+[user]
+  name = Michael Murphy
+  email = mikeymurph77@gmail.com
+[core]
+  excludesfile = /Users/MMurphy/.gitignore_global
+  editor = /usr/local/bin/vim
+  pager = less -+X -+F
+[push]
+  default = current
+[color]
+  ui = always
+[alias]
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+[rebase]
+  autosquash = true
