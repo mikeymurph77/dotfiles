@@ -1,11 +1,7 @@
-# This file is loaded in .bashrc and .zshrc
-# No need to source the file.
-# Just save and reload the terminal and the aliases are good to use
-
 # -----------------------------------------------------------------------------
 # Open this file in Sublime
 # -----------------------------------------------------------------------------
-alias dotfiles="sublime /Users/MMurphy/dotfiles"
+alias dotfiles="sublime $HOME/dotfiles"
 alias oa="sublime /Users/MMurphy/dotfiles/aliases"
 
 # -----------------------------------------------------------------------------
@@ -29,7 +25,6 @@ alias df="ls -a ~ | ag '^\.'"
 # -----------------------------------------------------------------------------
 # ZSH
 # -----------------------------------------------------------------------------
-alias ezsh="sublime $HOME/dotfiles/.zshrc"
 alias szsh="source $HOME/dotfiles/.zshrc"
 
 # -----------------------------------------------------------------------------
