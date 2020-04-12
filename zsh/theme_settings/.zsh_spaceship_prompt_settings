@@ -1,0 +1,13 @@
+# Spaceship is a minimalistic, powerful and extremely customizable Zsh prompt.
+# It combines everything you may need for convenient work, without
+# unnecessary complications, like a real spaceship.
+# https://github.com/denysdovhan/spaceship-prompt
+
+ZSH_THEME="spaceship"
+SPACESHIP_PROMPT_DEFAULT_PREFIX=""
+# SPACESHIP_CHAR_SYMBOL="👉 "
+SPACESHIP_CHAR_PREFIX=""
+SPACESHIP_GIT_BRANCH_COLOR="green"
+SPACESHIP_GIT_STATUS_COLOR="yellow"
+SPACESHIP_RUBY_SYMBOL=""
+SPACESHIP_RUBY_PREFIX="Ruby "
