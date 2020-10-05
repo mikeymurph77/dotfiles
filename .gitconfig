@@ -1,12 +1,8 @@
 # https://git-scm.com/docs/git-config/2.20.0#_variables
-
-[user]
-  name = Michael Murphy
-  email = mikeymurph77@gmail.com
 [core]
   excludesfile = /Users/MMurphy/.gitignore_global
   editor = /usr/local/bin/vim
-  pager = less -+X -+F
+  pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
   default = current
 [color]

@@ -7,6 +7,11 @@
     ```
 2. Run `sh mac/install_packages.sh` to install brew formulas and casks.
 3. Run `sh setup/install_env.sh` to finalize set up with symbolic links and a few other programs.
+4. Add the following to your systems `.gitconfig`
+   ```
+   [include]
+     path = /dev/dotfiles/.gitconfig
+   ```
 
 ### Other things you'll find
 #### `editors`

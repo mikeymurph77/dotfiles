@@ -156,4 +156,6 @@ alias run_everything="itermocil ruby_apps; itermocil react_apps; itermocil micro
 # -----------------------------------------------------------------------------
 # Other
 # -----------------------------------------------------------------------------
-alias iossim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app "
+alias iossim="open /Applications/Xcode.app/Contents/Developer/Applications/Simulator.app"
+alias python="python3"
+alias pip="pip3"

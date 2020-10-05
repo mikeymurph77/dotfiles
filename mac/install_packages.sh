@@ -3,6 +3,7 @@ brew update
 # terminal applications
 brew install \
   awscli \
+  diff-so-fancy \
   gh \
   git \
   git-extras \
@@ -10,6 +11,7 @@ brew install \
   gitin \
   heroku \
   itermocil \
+  micro \
   neofetch \
   node \
   postgresql \

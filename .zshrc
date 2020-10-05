@@ -2,6 +2,12 @@ export DOTPATH=$HOME/dotfiles
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+# export PATH="/usr/local/opt/awscli@1/bin:$PATH"
+export PATH="/usr/local/opt/awscli/bin:$PATH"
+export PATH="/usr/local/opt/python@3.7/bin:$PATH"
+export PATH="/usr/local/opt/imagemagick@6/bin:$PATH"
+export ANDROID_SDK=/Users/MMurphy/Library/Android/sdk
+export PATH=/Users/MMurphy/Library/Android/sdk/platform-tools:$PATH
 
 # USE `whoami` in terminal to get username
 DEFAULT_USER=MMurphy
