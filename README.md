@@ -2,84 +2,70 @@
 
 A collection of dotfiles and scripts to set up a new Mac development environment with commonly used tools and configurations.
 
-## Features
-
-- Automated installation of common development tools via Homebrew
-- ZSH configuration with Spaceship theme and useful plugins
-- Git configuration with separate work/personal profiles
-- Custom aliases for improved productivity
-- Editor settings backup
-- Separate work and personal configuration support
-
 ## Installation
 
-### 1. Install Homebrew
-
-First, install [Homebrew](https://brew.sh/) by running:
-
+1. Install Homebrew
+Installs the Homebrew package manager for macOS.
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-### 2. Install Packages
-
-Run the following command to install necessary brew formulas and applications:
-
+2. Install Packages
+Installs common development tools, terminal utilities, and GUI applications via Homebrew.
 ```bash
 sh mac/install_packages.sh
 ```
 
-This will install:
-- Development tools (git, nvm, Java 8/11, etc.)
-- CLI utilities (awscli, tree, ag, etc.)
-- GUI applications (Warp, Arc, Cursor, Raycast, etc.)
-
-### 3. Setup Environment
-
-Run the environment setup script:
-
+3. Setup Environment
+Creates necessary directories, configures environments, and sets up symbolic links for dotfiles.
 ```bash
 sh setup/install_env.sh
 ```
 
-This script will:
-- Set up directory structure
-- Install Oh My Zsh
-- Install Spaceship theme
-- Install ZSH plugins
-- Create symbolic links
-- Set up Java environment
-
 ## Configuration Files
 
-The following files are ignored by git and need to be created manually:
+The following files require manual creation and are git-ignored:
 
 ### Work/Personal Configurations
-- `zsh/.work/config`: Work-specific environment variables, paths, and configurations
-- `zsh/.personal/config`: Personal environment variables, paths, and configurations
-- `aliases/.work`: Work-specific command aliases and shortcuts
-- `aliases/.personal`: Personal command aliases and shortcuts
+- `zsh/.work/config`: Work-specific environment variables and paths
+- `zsh/.personal/config`: Personal environment variables and paths
+- `aliases/.work`: Work-specific command aliases
+- `aliases/.personal`: Personal command aliases
 
-These files are automatically created with template content during setup, but you should customize them based on your needs.
+Template files are created during setup, but should be customized for your needs.
 
-## Directory Structure
+## Structure
 
-### `editors/`
-Contains backup configurations for various editors. Currently includes:
-- Sublime Text 3 settings
-
-### `aliases/`
-Collection of useful aliases:
-- Git shortcuts
+### `/aliases`
+Command aliases and shortcuts organized by category:
+- Git operations
 - Directory navigation
-- Common development commands
+- Development tools
 - Unix utilities
 
-### `zsh/`
-ZSH-specific configurations:
+### `/editors`
+Editor-specific configurations and settings:
+- Editor setting preferences
+- Theme configurations
+- Syntax highlighting rules
+
+### `/mac`
+Contains Homebrew package definitions. All brew formulas and casks should be defined in `install_packages.sh`.
+
+### `/setup`
+Setup scripts for initializing the development environment:
+- Directory structure creation
+- Oh My Zsh installation
+- Theme and plugin setup
+- Symbolic link creation
+- Programming language environment configuration
+
+### `/zsh`
+ZSH shell configurations:
 - Theme settings
 - Plugin configurations
 - Shell customizations
+- Work/Personal specific configurations
 
 ## Acknowledgments
 
