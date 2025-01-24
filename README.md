@@ -1,31 +1,86 @@
 # Dotfiles
 
-## Setup
-1. Run the following in your terminal to download [Homebrew](https://brew.sh/):
-    ```
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    ```
-2. Run `sh mac/install_packages.sh` to install brew formulas and casks.
-3. Run `sh setup/install_env.sh` to finalize set up with symbolic links and a few other programs.
-4. Add the following to your systems `.gitconfig`
-   ```
-   [include]
-     path = ~/dev/dotfiles/.gitconfig
-   ```
-5. The setup will automatically install:
-   - Spaceship theme for zsh
-   - zsh-autosuggestions plugin
-   - Create local/work configuration files
+A collection of dotfiles and scripts to set up a new Mac development environment with commonly used tools and configurations.
 
-6. Customize the following files for your specific needs:
-   - `zsh/.personal` for personal-specific configurations
-   - `zsh/.work` for work-specific configurations
+## Features
 
-### Other things you'll find
-#### `editors`
-Back up your editor settings, because no one likes rebuilding that stuff
+- Automated installation of common development tools via Homebrew
+- ZSH configuration with Spaceship theme and useful plugins
+- Git configuration with separate work/personal profiles
+- Custom aliases for improved productivity
+- Editor settings backup
+- Separate work and personal configuration support
 
-#### More to come...
+## Installation
 
-### Kudos
-- [Neil Mahoney](https://github.com/nmahoney/dotfiles) as his [dotfiles](https://github.com/nmahoney/dotfiles) served as a base template to build the initial version of my own dotfiles.
+### 1. Install Homebrew
+
+First, install [Homebrew](https://brew.sh/) by running:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+### 2. Install Packages
+
+Run the following command to install necessary brew formulas and applications:
+
+```bash
+sh mac/install_packages.sh
+```
+
+This will install:
+- Development tools (git, nvm, Java 8/11, etc.)
+- CLI utilities (awscli, tree, ag, etc.)
+- GUI applications (Warp, Arc, Cursor, Raycast, etc.)
+
+### 3. Setup Environment
+
+Run the environment setup script:
+
+```bash
+sh setup/install_env.sh
+```
+
+This script will:
+- Set up directory structure
+- Install Oh My Zsh
+- Install Spaceship theme
+- Install ZSH plugins
+- Create symbolic links
+- Set up Java environment
+
+## Configuration Files
+
+The following files are ignored by git and need to be created manually:
+
+### Work/Personal Configurations
+- `zsh/.work/config`: Work-specific environment variables, paths, and configurations
+- `zsh/.personal/config`: Personal environment variables, paths, and configurations
+- `aliases/.work`: Work-specific command aliases and shortcuts
+- `aliases/.personal`: Personal command aliases and shortcuts
+
+These files are automatically created with template content during setup, but you should customize them based on your needs.
+
+## Directory Structure
+
+### `editors/`
+Contains backup configurations for various editors. Currently includes:
+- Sublime Text 3 settings
+
+### `aliases/`
+Collection of useful aliases:
+- Git shortcuts
+- Directory navigation
+- Common development commands
+- Unix utilities
+
+### `zsh/`
+ZSH-specific configurations:
+- Theme settings
+- Plugin configurations
+- Shell customizations
+
+## Acknowledgments
+
+Special thanks to [Neil Mahoney](https://github.com/nmahoney/dotfiles) whose dotfiles served as the initial inspiration for this project.
