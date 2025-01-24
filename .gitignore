@@ -1,4 +1,7 @@
 .zcompdump-mikem-mbp15-eng-3-5.3
+.gitconfig.local
+.gitconfig.work
+.gitconfig.personal
 aliases/.work
 aliases/.personal
 zsh/.work

@@ -1,7 +1,7 @@
 # https://git-scm.com/docs/git-config/2.20.0#_variables
 [core]
   excludesfile = $HOME/.gitignore_global
-  editor = /usr/local/bin/vim
+  editor = vim
   pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
   default = current
@@ -15,9 +15,12 @@
 [rebase]
   autosquash = true
 
-# Default to personal config for all repositories
 [include]
-  path = ~/.gitconfig.personal
+    path = ~/.gitconfig.local
+
+# # Default to personal config for all repositories
+# [include]
+#   path = ~/.gitconfig.personal
 
 # Override with work config for work directory
 [includeIf "gitdir:~/dev/work/"]
