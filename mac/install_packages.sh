@@ -5,51 +5,30 @@ brew install \
   awscli \
   diff-so-fancy \
   gh \
-  git \
+  glab \
   git-extras \
-  git-friendly \
-  gitin \
-  heroku \
-  itermocil \
-  micro \
-  neofetch \
-  node \
-  postgresql \
-  ruby-build \
-  sqlite \
+  git-friendly/git-friendly/git-friendly \
+  fastfetch \
   the_silver_searcher \
-  tmux \
+  nvm \
+  openjdk@11 \
+  openjdk@8 \
   tree \
-  vim \
   zsh-syntax-highlighting
 
 # GUI applications
-brew cask
-brew tap homebrew/cask-versions
-
-brew cask install \
-  firefox \
-  intellij-idea \
-  iterm2-nightly \
-  sublime-text \
-  visual-studio-code-insiders \
-  github
-
-brew cask install \
-  alfred \
-  bartender \
+brew install --cask \
   caffeine \
-  dropbox \
-  google-chrome \
-  notion \
   postman \
-  rectangle \
-  rocket \
-  scroll-reverser \
-  sequel-pro \
-  slack \
-  spotify
-
-# fonts
-brew tap homebrew/cask-fonts
-brew cask install homebrew/cask-fonts/font-source-code-pro
+  spotify \
+  raycast \
+  warp \
+  arc \
+  cursor \
+  obsidian \
+  msty \
+  notunes \
+  alt-tab \
+  hiddenbar \
+  stats \
+  xnapper \

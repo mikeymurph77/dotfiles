@@ -1,13 +1,12 @@
 # https://git-scm.com/docs/git-config/2.20.0#_variables
 [core]
-  excludesfile = /Users/MMurphy/.gitignore_global
+  excludesfile = $HOME/.gitignore_global
   editor = /usr/local/bin/vim
   pager = diff-so-fancy | less --tabs=4 -RFX
 [push]
   default = current
 [color]
   ui = always
-[alias]
 [filter "lfs"]
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
@@ -15,3 +14,15 @@
   clean = git-lfs clean -- %f
 [rebase]
   autosquash = true
+
+# Default to personal config for all repositories
+[include]
+  path = ~/.gitconfig.personal
+
+# Override with work config for work directory
+[includeIf "gitdir:~/dev/work/"]
+  path = ~/.gitconfig.work
+
+# Ensure personal config for dotfiles repository
+[includeIf "gitdir:~/dev/dotfiles/"]
+  path = ~/.gitconfig.personal

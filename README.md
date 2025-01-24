@@ -10,8 +10,16 @@
 4. Add the following to your systems `.gitconfig`
    ```
    [include]
-     path = /dev/dotfiles/.gitconfig
+     path = ~/dev/dotfiles/.gitconfig
    ```
+5. The setup will automatically install:
+   - Spaceship theme for zsh
+   - zsh-autosuggestions plugin
+   - Create local/work configuration files
+
+6. Customize the following files for your specific needs:
+   - `zsh/.personal` for personal-specific configurations
+   - `zsh/.work` for work-specific configurations
 
 ### Other things you'll find
 #### `editors`

@@ -1,26 +1,38 @@
 # -----------------------------------------------------------------------------
-# Open this file in Sublime
+# Quick Jumps to Directories
 # -----------------------------------------------------------------------------
-alias dotfiles="sublime $HOME/dotfiles"
-alias oa="sublime /Users/MMurphy/dotfiles/aliases"
+alias dev="cd ~/dev"
+alias work="cd ~/dev/work"
+alias personal="cd ~/dev/personal"
 
 # -----------------------------------------------------------------------------
-# override `code` to open vscode-insiders instead
+# Source git aliases
 # -----------------------------------------------------------------------------
-alias code="code-insiders"
+source $HOME/dotfiles/aliases/.git_aliases
+
+
+# -----------------------------------------------------------------------------
+# Source git extras (https://github.com/tj/git-extras)
+# -----------------------------------------------------------------------------
+source $(brew --prefix)/opt/git-extras/share/git-extras/git-extras-completion.zsh
+
+# -----------------------------------------------------------------------------
+# Open this file in Sublime
+# -----------------------------------------------------------------------------
+alias dotfiles="cursor $HOME/dotfiles"
+alias oa="cursor $HOME/dotfiles/aliases"
 
 # -----------------------------------------------------------------------------
 # Unix
 # -----------------------------------------------------------------------------
-alias tlf="tail -f"
-alias ln='ln -v'
-alias mkdir='mkdir -p'
-alias ...='../..'
-alias ls='ls -Ga'
-alias l='ls'
-alias ll='ls -al'
-alias lh='ls -Alh'
-alias df="ls -a ~ | ag '^\.'"
+alias tlf="tail -f"                   # Follow file output in real-time
+alias ln='ln -v'                      # Create symbolic links with verbose output
+alias mkdir='mkdir -p'                # Create parent directories as needed when making new directories
+alias ls='ls -Ga'                     # List files with colors and include hidden files
+alias l='ls'                          # Short alias for ls
+alias ll='ls -al'                     # List all files in long format
+alias lh='ls -Alh'                    # List all files in long format with human readable sizes
+alias df="ls -a ~ | ag '^\.'"         # List all dotfiles in home directory using silver searcher
 
 # -----------------------------------------------------------------------------
 # ZSH
@@ -31,60 +43,6 @@ alias szsh="source $HOME/dotfiles/.zshrc"
 # Pretty print the $PATH
 # -----------------------------------------------------------------------------
 alias path="echo $PATH | tr -s ':' '\n'"
-
-# -----------------------------------------------------------------------------
-# git
-# -----------------------------------------------------------------------------
-alias ga='git add'
-alias gaa='git add .'
-alias gb='git for-each-ref --sort=committerdate refs/heads/ --format="%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))"'
-alias gba='git branch -a'
-alias gc='git commit -v'
-alias gco='git checkout'
-alias gnb='git checkout -b'
-alias gcom='gco master'
-alias gcomp='gco master; echo "Fetching master from origin/master..."; git fetch; echo "Pulling master from origin/master..."; git pull'
-alias gcod='gco develop'
-alias gcodp='gco develop; echo "Fetching develop from origin/develop..."; git fetch; echo "Pulling develop from origin/develop..."; git pull'
-alias glg='git log --graph --pretty="format:%C(yellow)%h %Cblue%s%Cred%d  %Creset%aN %ar%Creset" --all'
-alias gll='git log --format=medium'
-alias gm='git merge'
-alias gp='git push'
-alias gpo='git push origin'
-alias gpom='gpo master'
-alias gpl='git pull'
-alias gplo='git pull origin'
-alias gplom='git pull origin master'
-alias gplr='git pull --rebase'
-alias gr='git rebase'
-alias gri='git rebase -i'
-alias grim='git rebase -i master'
-alias grid='git rebase -i develop'
-alias gra='git rebase --abort'
-alias grc='git rebase --continue'
-alias grm='git rm'
-alias gs='git status'
-alias gss='git status -s'
-alias gcne='git commit --amend --no-edit'
-alias stash='git stash'
-alias gsp='git stash pop'
-alias ss='git stash show'
-alias sc='git stash clear'
-alias gfp='git fetch; git pull --rebase'
-alias gfpb='git fetch; git pull --rebase; bundle --quiet'
-alias gfpm='git fetch; git pull --rebase; mvn clean install'
-
-# -----------------------------------------------------------------------------
-# Gitin (https://github.com/isacikgoz/gitin)
-# -----------------------------------------------------------------------------
-alias gib="gitin branch --all"
-alias gil="gitin log"
-alias gis="gitin status"
-
-# -----------------------------------------------------------------------------
-# Git-Extras (https://github.com/tj/git-extras/blob/master/Commands.md)
-# -----------------------------------------------------------------------------
-alias ge="git-extras"
 
 # -----------------------------------------------------------------------------
 # Bundler
@@ -145,13 +103,10 @@ alias cm="./new_migration.sh"
 # -----------------------------------------------------------------------------
 # Search
 # -----------------------------------------------------------------------------
+# Search for processes in ps output using silver searcher (ag)
+# Usage: checkp <search_term>
+# Example: checkp nginx
 alias checkp="ps aux | ag "
-
-# -----------------------------------------------------------------------------
-# itermocil
-# -----------------------------------------------------------------------------
-alias run="itermocil"
-alias run_everything="itermocil ruby_apps; itermocil react_apps; itermocil microservices"
 
 # -----------------------------------------------------------------------------
 # Other

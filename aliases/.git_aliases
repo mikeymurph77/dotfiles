@@ -1,0 +1,47 @@
+# -----------------------------------------------------------------------------
+# git
+# -----------------------------------------------------------------------------
+alias ga='git add'
+alias gaa='git add .'
+alias gb='git for-each-ref --sort=committerdate refs/heads/ --format="%(authordate:short) %(color:red)%(objectname:short) %(color:yellow)%(refname:short)%(color:reset) (%(color:green)%(committerdate:relative)%(color:reset))"'
+alias gba='git branch -a'
+alias gc='git commit -v'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gnb='git checkout -b'
+alias gcom='git checkout $(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@")'
+alias gcomp='gcom; echo "Fetching from remote..."; git fetch; echo "Pulling latest changes..."; git pull'
+alias gcod='git checkout develop'
+alias gcodp='gcod; echo "Fetching develop from origin/develop..."; git fetch; echo "Pulling develop from origin/develop..."; git pull'
+alias glg='git log --graph --pretty="format:%C(yellow)%h %Cblue%s%Cred%d  %Creset%aN %ar%Creset" --all'
+alias gll='git log --format=medium'
+alias gm='git merge'
+alias gp='git push'
+alias gpo='git push origin'
+alias gpom='gpo $(git symbolic-ref refs/remotes/origin/HEAD | sed "s@^refs/remotes/origin/@@")'
+alias gpl='git pull'
+alias gplo='git pull origin'
+alias gplom='git pull origin master'
+alias gplr='git pull --rebase'
+alias gr='git rebase'
+alias gri='git rebase -i'
+alias grim='git rebase -i master'
+alias grid='git rebase -i develop'
+alias gra='git rebase --abort'
+alias grc='git rebase --continue'
+alias grm='git rm'
+alias gs='git status'
+alias gss='git status -s'
+alias gcne='git commit --amend --no-edit'
+alias stash='git stash'
+alias gsp='git stash pop'
+alias ss='git stash show'
+alias sc='git stash clear'
+alias gfp='git fetch; git pull --rebase'
+alias gfpb='git fetch; git pull --rebase; bundle --quiet'
+alias gfpm='git fetch; git pull --rebase; mvn clean install'
+
+# -----------------------------------------------------------------------------
+# Git-Extras (https://github.com/tj/git-extras/blob/master/Commands.md)
+# -----------------------------------------------------------------------------
+alias ge="git-extras"
