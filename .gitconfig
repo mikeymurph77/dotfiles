@@ -15,12 +15,9 @@
 [rebase]
   autosquash = true
 
+# Default to personal config for all repositories
 [include]
-    path = ~/.gitconfig.local
-
-# # Default to personal config for all repositories
-# [include]
-#   path = ~/.gitconfig.personal
+  path = ~/.gitconfig.personal
 
 # Override with work config for work directory
 [includeIf "gitdir:~/dev/work/"]
