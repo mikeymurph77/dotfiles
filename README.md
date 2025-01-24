@@ -4,19 +4,22 @@ A collection of dotfiles and scripts to set up a new Mac development environment
 
 ## Installation
 
-1. Install Homebrew
+1. **Install Homebrew**
+
 Installs the Homebrew package manager for macOS.
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-2. Install Packages
+2. **Install Packages**
+
 Installs common development tools, terminal utilities, and GUI applications via Homebrew.
 ```bash
 sh mac/install_packages.sh
 ```
 
-3. Setup Environment
+3. **Setup Environment**
+
 Creates necessary directories, configures environments, and sets up symbolic links for dotfiles.
 ```bash
 sh setup/install_env.sh
