@@ -35,6 +35,13 @@ The following files require manual creation and are git-ignored:
 - `aliases/.work`: Work-specific command aliases
 - `aliases/.personal`: Personal command aliases
 
+### Git Configurations
+- Duplicate `.gitconfig.work.STARTER` to `.gitconfig.work` and add your work email
+- Duplicate `.gitconfig.personal.STARTER` to `.gitconfig.personal` and add your personal email
+
+These files contain Git user configurations and are git-ignored to keep credentials private.
+
+
 Template files are created during setup, but should be customized for your needs.
 
 ## Structure
