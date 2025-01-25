@@ -19,6 +19,7 @@ brew install \
 # GUI applications
 brew install --cask \
   caffeine \
+  cursr \
   postman \
   spotify \
   raycast \
