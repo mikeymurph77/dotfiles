@@ -30,6 +30,7 @@ brew install --cask \
   msty \
   notunes \
   alt-tab \
+  rectangle-pro \
   hiddenbar \
   stats \
   xnapper \
